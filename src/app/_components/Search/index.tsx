@@ -1,8 +1,10 @@
+import { FC } from 'react';
 import { TextField } from '@mui/material';
 
-export const SuggesterPromptInput = () => {
+export const SuggesterPromptInput: FC = () => {
   return (
     <TextField
+      name="userPrompt"
       size="small"
       label="Write your prompt here"
       type="search"

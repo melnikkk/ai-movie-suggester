@@ -1,6 +1,6 @@
-import { SuggesterPromptInput } from '@/app/_components/Search';
-import { SubmitButton } from '@/app/_components/SubmitButton';
-import { Stack, Container, Box, Typography } from '@mui/material';
+import { Container, Box, Typography } from '@mui/material';
+import { SearchForm } from '@/app/_components/SearchForm';
+import { ResultBlock } from '@/app/_components/ResultBlock';
 
 export default function Home() {
   return (
@@ -9,21 +9,8 @@ export default function Home() {
         <Typography variant="h2" component="h1" sx={{ mb: '12px' }}>
           AI Movie Suggester
         </Typography>
-        <form>
-          <Stack
-            direction="row"
-            spacing={2}
-            sx={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '100%',
-            }}
-          >
-            <SuggesterPromptInput />
-
-            <SubmitButton>Search</SubmitButton>
-          </Stack>
-        </form>
+        <SearchForm />
+        <ResultBlock />
       </Container>
     </Box>
   );
