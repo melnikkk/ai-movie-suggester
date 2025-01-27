@@ -6,6 +6,7 @@ import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import './globals.css';
 import theme from '../styles/theme';
+import { AIContextProvider } from '@/app/ai/AIContextProvider';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -29,8 +30,10 @@ export default function RootLayout({
         <AppRouterCacheProvider options={{ key: 'css' }}>
           <StyledEngineProvider injectFirst>
             <ThemeProvider theme={theme}>
-              <CssBaseline />
-              {children}
+              <AIContextProvider>
+                <CssBaseline />
+                {children}
+              </AIContextProvider>
             </ThemeProvider>
           </StyledEngineProvider>
         </AppRouterCacheProvider>
