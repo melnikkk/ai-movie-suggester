@@ -28,6 +28,7 @@ export const SearchForm: FC = () => {
           justifyContent: 'center',
           alignItems: 'center',
           height: '100%',
+          mb: '12px',
         }}
       >
         <SuggesterPromptInput />
