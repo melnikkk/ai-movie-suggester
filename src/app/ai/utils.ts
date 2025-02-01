@@ -13,6 +13,6 @@ export const parseMovieData = ({
   title: Title,
   plot: Plot !== NOT_APPLICABLE ? Plot : null,
   posterUrl: Poster !== NOT_APPLICABLE ? Poster : null,
-  genre: Genre !== NOT_APPLICABLE ? Genre.split(', ') : null,
+  genres: Genre !== NOT_APPLICABLE ? Genre.split(', ') : null,
   year: Year !== NOT_APPLICABLE ? Year : null,
 });

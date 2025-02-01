@@ -39,7 +39,7 @@ export interface Movie {
   posterUrl: string | null;
   plot: string | null;
   year: string | null;
-  genre: Array<string> | null;
+  genres: Array<string> | null;
 }
 
 export interface Conversation {
