@@ -1,4 +1,4 @@
-import { Container, Box, Typography, Paper } from '@mui/material';
+import { Container, Box, Typography } from '@mui/material';
 import { SearchForm } from '@/app/_components/SearchForm';
 import { ResultBlock } from '@/app/_components/ResultBlock';
 
