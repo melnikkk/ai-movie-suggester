@@ -1,19 +1,20 @@
 'use client';
 
 import { useActions, useUIState } from 'ai/rsc';
+import { Conversation } from '@/app/ai/types';
 
 export const useAISearch = () => {
   const { continueConversation } = useActions();
   const [, setConversation] = useUIState();
 
   return {
-    search: async (userPrompt: string) => {
+    search: async (userPrompt: FormDataEntryValue) => {
       const result = await continueConversation({
         role: 'user',
         content: userPrompt,
       });
-      console.log(result);
-      setConversation((prevState: any) => [...prevState, result]);
+
+      setConversation((prevState: Array<Conversation>) => [...prevState, result]);
     },
   };
 };
